@@ -2,7 +2,7 @@
     "version": 2,
     "name": "book-json",
     "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
+       { "src": "app.mjs", "use": "@vercel/node" }
     ],
     "routes": [
        { "src": "/(.*)", "dest": "/app.js" }
