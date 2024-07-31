@@ -14,6 +14,12 @@ app.use(morgan('dev'));
 app.use(express.static("public"));
 // app.use(bodyParser);
 
+
+app.get('/', (req, res) => {
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+})
+
+
 app.get("/",(req,res)=>{
     res.render("index",{layout:"./",title:"BookDB - Home"});
 })
