@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import morgan from "morgan";
 
 const app = express();
-const port = 8000;
+const port = 3000;
 
 app.set("view engine", "ejs");
 
