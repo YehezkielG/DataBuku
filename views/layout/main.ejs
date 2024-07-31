@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style/output.css">
+</head>
+<body>
+    <header class="bg-blue-300 flex items-center  justify-between p-4">
+        <h1 class="flex items-center font-bold text-2xl">
+            <img src="image/icon/icons-books.png" alt="" class="mx-2" width="30x">BookDB
+        
+        </h1>
+        <nav class="flex items-center">
+            <div class="flex item-center  mx-2.5 rounded-md overflow-hidden">
+                <input type="text" class="px-1" placeholder="Buku, Penulis....">
+                <button class="p-1 bg-blue-500 text-white">
+                    Cari
+                </button>
+            </div>
+            <ul class="flex items-center">
+                <li class="mx-2 underline"> <a href="">Buku</a> </li>
+                <li class="mx-2 underline"> <a href="">Penulis</a> </li>
+                <li class="mx-2 underline"> <a href="">Kategori</a> </li>
+                <li class="mx-2 underline"> <a href="">Contact Us</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <%- body %>
+    <footer>
+        This web Made by ❤️ Yehezkiel Haganta
+    </footer>
+</body>
+</html>
