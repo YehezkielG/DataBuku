@@ -1,4 +1,5 @@
 import express from "express";
+import kontol from "kontol"
 import expressEjsLayouts from "express-ejs-layouts";
 import bodyParser from "body-parser";
 import morgan from "morgan";
@@ -29,3 +30,5 @@ app.use("/", (req, res) => {
 app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)
 })
+
+export default app
