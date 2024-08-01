@@ -1,16 +1,24 @@
 [
-    {
-        "id":"1",
-        "judul":"Filosofi Teras",
-        "imgPath":"image/buku/filosofiTeras",
-        "harga":120000,
-        "Penerbit":"Gramedia",
-        "deskripsi":"Apakah kamu sering merasa khawatir akan banyak hal? baperan? susah move-on? mudah tersinggung dan marah-marah di social media maupun dunia nyata? Lebih dari 2.000 tahun lalu, sebuah mazhab filsafat menemukan akar masalah dan juga solusi dari banyak emosi negatif. Stoisisme, atau Filosofi Teras, adalah filsafat Yunani-Romawi kuno yang bisa membantu kita mengatasi emosi negatif dan menghasilkan mental yang tangguh dalam menghadapi naik-turunnya kehidupan. Jauh dari kesan filsafat sebagai topik berat dan mengawang-awang, Filosofi Teras justru bersifat praktis dan relevan dengan kehidupan Generasi Milenial dan Gen-Z masa kini.",
-        "komentar":[
-
-        ]
-    },
-    {
-
-    }
+  {
+    "id": "1",
+    "judul": "Filosofi Teras",
+    "penulis": "Henrry Manampiring",
+    "harga": "120.000",
+    "Penerbit": "Gramedia",
+    "deskripsi": "Apakah kamu sering merasa khawatir akan banyak hal? baperan? susah move-on? mudah tersinggung dan marah-marah di social media maupun dunia nyata? Lebih dari 2.000 tahun lalu, sebuah mazhab filsafat menemukan akar masalah dan juga solusi dari banyak emosi negatif. Stoisisme, atau Filosofi Teras, adalah filsafat Yunani-Romawi kuno yang bisa membantu kita mengatasi emosi negatif dan menghasilkan mental yang tangguh dalam menghadapi naik-turunnya kehidupan. Jauh dari kesan filsafat sebagai topik berat dan mengawang-awang, Filosofi Teras justru bersifat praktis dan relevan dengan kehidupan Generasi Milenial dan Gen-Z masa kini.",
+    "komentar": [],
+    "views": 0,
+    "sampul": "image/Sampul-buku/filosofi-teras.jpg"
+  },
+  {
+    "id": "2",
+    "judul": "Atomic habbits",
+    "penulis": "James Clear",
+    "harga": "110.000",
+    "Penerbit": "Gramedia",
+    "deskripsi": "Atomic Habits: Perubahan Kecil yang Memberikan Hasil Luar Biasa adalah buku kategori self improvement karya James Clear. Pada umumnya, perubahan-perubahan kecil seringkali terkesan tak bermakna karena tidak langsung membawa perubahan nyata pada hidup suatu manusia.",
+    "komentar": [],
+    "views": 0,
+    "sampul": "image/Sampul-buku/atomic-habits.jpg"
+  }
 ]

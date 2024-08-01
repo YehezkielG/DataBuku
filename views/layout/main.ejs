@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="style/output.css">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="http://localhost:3000/style/tailwind">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
     <header class="bg-blue-300 flex items-center  justify-between p-4">
         <h1 class="flex items-center font-bold text-2xl">
-            <img src="image/icon/icons-books.png" alt="" class="mx-2" width="30x">BookDB
-        
+            <img src="../image/icon/icons-books.png" alt="" class="mx-2" width="30x">FMedia
         </h1>
         <nav class="flex items-center">
             <div class="flex item-center  mx-2.5 rounded-md overflow-hidden">
@@ -20,16 +24,65 @@
                 </button>
             </div>
             <ul class="flex items-center">
-                <li class="mx-2 underline"> <a href="">Buku</a> </li>
-                <li class="mx-2 underline"> <a href="">Penulis</a> </li>
-                <li class="mx-2 underline"> <a href="">Kategori</a> </li>
-                <li class="mx-2 underline"> <a href="">Contact Us</a> </li>
+                <li class="mx-2 underline"> <a href="../populer">Buku</a> </li>
+                <li class="mx-2 underline"> <a href="../buku">Penulis</a> </li>
+                <li class="mx-2 underline"> <a href="../buku">Kategori</a> </li>
+                <li class="mx-2 underline"> <a href="#contact">Contact Us</a> </li>
             </ul>
         </nav>
     </header>
     <%- body %>
-    <footer>
-        This web Made by ❤️ Yehezkiel Haganta
-    </footer>
+        <footer class="bottomfooter">
+            <div class="border border-top border-gray p-4 w-full flex items-center justify-between px-10">
+                <div>
+                    <h1 class="flex items-center font-bold text-2xl my-2">
+                        <img src="../image/icon/icons-books.png" alt="" class="mr-2" width="30px">FMedia
+                    </h1>
+                    <div class="">
+                        <div class="flex items-center">
+                            <img class="w-6 my-1"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAASFJREFUSEvt161KBVEUBeDvvoCCTQQFMVgUwWrwJ1isBkHEdzBabSbFbDT4BDYFsWoyWAyKaDGIyaQzcAYOA9eZC2eYy+hpZxjWYq219549PS2dXku8hop4EtOJnXjEU4xZVjyOF5I78Y0JvBbkZeJlXCZWW8Ct4KozxF84xD3egqo5HEfuJVec18QaHkoRLWXPr5skXu1TF40Sf2IkUjWPo9AVo1hoSvEtFiPw8yznzT5dkTTjG+SWFucC650jfsZOUPWBu1LGY+G+gb2UGedtM1tjuh1gvw3is6y3t1ISv+MkAOZfnNMIfBsz4b6LqZTEsct/o6r/FXd/cjWS8aDLXt12qlz2cjWDrLe/zerYmcr1tsYITvPKUP1JpJFUgfIDKWhhH+ggzngAAAAASUVORK5CYII=" />
+                            <a class="text-gray-500 mx-2" href="https://www.facebook.com/FMedia">FMedia</a>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="w-6 my-1"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAoxJREFUSEvl1kvozmkUwPHPXxaKGixcEkLTUGhk4X6NzcitWFiZmCkLCzaIsXFJuWXBgkgpq5mNy2ws3K8lZhrkWpSQSxILG/I7+v319uv3/N73nVf9lWfzvj2/c873Oec5l6dNB622DuL65sF98SM61YnQB9zH03qRrPK4D7ZhFnrUM1T4/hp/Y1XqECnw3MzDwxm4a5PAovg7LMLx4ocycO9M+A5+aBHarv4KPyF+v6wy8AEsaQH6AJ0xsMbGfvxeBQ6FuJ9u/xP8D0bluv9heP7/LbrjY7vdoscD8KgONDzairsI+bGYj0jGWvB1/FxjqxdepMCjcbUCvBo7EGVTuyIfYn8p7uE9RhRkwvubKfAUnE6Al2MPhmYGFmJiLncOf+YJuRMrE/oRmSsp8EycKFG8kIMiO3djRkEmdOJgcU3/5ocrmhmPS82CF+MQ1mUZuynh0VpswUb8USIzARebBUdYw+voRr8kwEcRjWdBHvqi2GTEtXxexayehpMlhqfjVN6BooWWrSNZVs+rAE/FmRQ4PgaguJZhb5ata/JwloEj46PMNiPCXlyTstw43yw4sjGycnDWCHZhdsFqeLsiS7CXuI1+JeBxuJwCx6nOJkLZXk6D8nCOyeXC2F94iH3F1lhjK3rEtRR4ZF4OCbYI5/ba1pcL1jaQlG40lBspcEymZynNfD8mV5RN1Gy0zKjPOVkOxGOhakX4n6TAsf84cUd17FZ+foOeVUMitNdnT5wNrVBKdGPU/la7XzaPYzTeyt9YX4Mf3g5p5CEQsP7ZXI0SaZ+trRwgHhUHiwaqHntd8mn0awOvy6LdGPjHENOqtDwbeVdHpg9r0uW4qudVOo2Am2Q2Jv79gT8BaMhxHzndaXwAAAAASUVORK5CYII=" />
+                            <a class="text-gray-500 mx-2"
+                                href="https://www.instagram.com/official.FMedia">official.FMedia</a>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="w-6 my-1"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAa9JREFUSEvtlj8oRXEUxz9PSmKxWFgU2chEmWws2CySTRZKkpB/IUmKRTbJYsNAJpNiEpsoC4vFQlLCPa9z6/Trve6fd3nKe3V7t3PP7/s559zfueeXIk+/VJ64FMC/Vnm31JPAIFCVcASPwCaw6OtacAdwlDDQlWsHTsRowZLtgnq+AmUJBWG1hLHkgmc8w6zCaoBdoDVH+BnQC9yrzpzPsBlbsNjlGtYISyMG8AZMAOvAl14ikREs2QrcrUStZt8cEn6hWd4Zf4GHAu8DA8CTLigCRoF5oCRLAO/ANLDq/X+qTyWwBXSHBYvfMzACbBtQPbAHNDrwK6AHuDH2fmDNK3eFsQWW2uqeAn3AgxqLgXHNTkxShWXgQ59XAztAW4bKRALL+hdPeArYMBulQYWvzb4Y0pYsz/I6IoN9nXPN/tYRrtMsWwI2YGyw6MomEoEVhYxpN2TbdDaWnMC+0KXeNIVss1DtFEErkmsiGUciRunjOMJBa/5WxnYsBkUe97l8C9KHATudOoGDuIoh13UBhy5YBoF80OUk8hNHn2MdPOkBUjjehnxVubv9v1J/AzG/WB9938PnAAAAAElFTkSuQmCC" />
+                            <a class="text-gray-500 mx-2"
+                                href="wwww.official.FMedia@gmail.com">wwww.official.FMedia@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <img class="w-6 my-1"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfpJREFUSEvt1kuoT1EUx/HPjYEkz0J5RUlKDDDxyiOSMhDJQJEyUEhRBmJgQCkJkamJt4wkE4WBxESGTChJmUh5F2fVvv/uPd1z9/73v/lP7q7dGey1f9+91l57rdOjS6OnS1zD4P8W+aEI9ThcxjLMwA+cw2l8S55MSd9PvZ7VwaNxBXvwp8D9aXiK2QPYfsB1LMBYLO9rUwdvrQzv4B62F8DvY1PmgG+wMUXjcZPHB3AhLT7Hzmq+bRBeghcFUXlXRXEqtuBBE3gVWqfCT5zARXyvQQ7ifAH4c3Lg4WChHoWvGFkTjCS5i2vVyV/hI47jZAH4THXoo3W7gbJ6X8rSwTS/IObMAvAxnMqBd2NhlVyLsLZAtMQkNK/mwBvQ7y5KlDM28b6f5cBxt5HFs4YAGBJxHRPwNweO9ZXpHU8aAvhN7BhIp6lkRkU6jL0Y08EBVteeZ0uqCbwf27C4A/BLLG06dBN4Pl5jRAfersOjdsFhvxk3EI2j3XEWRwbblGuLkxFhX4MVhfQnWI9fnYCjnUWSHUqtLceOCO3KQUOkr8cTU8WKZj4vzahe8Q5zI95rlMZLOcPe9XqoI5Ojrs4tFPiNWykqrb+Lkr1NdxyeRoOPP4vpmIPx1X1Hi4v5PhWZ26k6lbD62eSSq23B0g3D4NJIdWzXtVD/A1e4TB/sCCruAAAAAElFTkSuQmCC" />
+                            <a class="text-gray-500 mx-2" href="https://wwww.twitter.com/fmedia">fmedia_</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-gray-500 p-2">
+                    <p class="my-1">Indonesia, Sumatera Utara,</p>
+                    <p class="my-1">Medan, Medan Johor,</p>
+                    <p class="my-1">Kwala Belaka, 20146</p>
+                    <p class="my-1">JL. Pintu Air 4 n.328b</p>
+                </div>
+            </div>
+            <div class="p-2 flex items-center justify-between px-10">
+                <div>
+                    &copy; Yehezkiel Haganta
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </div>
+                <div class="text-sm text-gray-500">
+                    Terms • Privacy
+                </div>
+            </div>
+        </footer>
+
 </body>
+
 </html>

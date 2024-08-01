@@ -1,0 +1,19 @@
+<div class="p-10 py-4">
+    <h1 class="font-bold text-2xl my-4">Buku Terpopuler</h1>
+    <div class="grid sm:grid-cols-7 gap-9 grid-cols-2 my-3">
+        <% databuku.forEach(buku=> { %>
+            <a class="rounded-lg shadow-lg p-3 inline-block" href="/buku/<%= buku.id %>">
+                <img src="<%= buku.sampul %>" alt="">
+                <small class="font-bold text-gray-500">
+                    <%= buku.penulis %>
+                </small>
+                <p>
+                    <%= buku.judul %>
+                </p>
+                <p class="text-lg text-blue-600">
+                    Rp. <%= buku.harga %>
+                </p>
+            </a>
+            <% }) %>
+    </div>
+</div>
