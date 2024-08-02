@@ -58,7 +58,8 @@ app.get("/populer", async (req,res)=>{
 })
 
 
-app.get("/admin",(req,res)=>{
+app.get("/admin",async (req,res)=>{
+    const data = await readData();
     res.render("admin",{layout:"layout/main",title:"Dashboard admin",databuku:data});
 })
 

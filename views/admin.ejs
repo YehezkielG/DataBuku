@@ -1,4 +1,4 @@
-<div class="my-5 px-10">
+<div class="my-5 px-14">
     <h1 class="text-2xl">
         Selamat datang admin
     </h1>
@@ -9,13 +9,15 @@
         </h1>
         <div>
             <p class="flex items-center">
-                <span class="material-symbols-outlined p-1 bg-red-500 text-white rounded-full text-sm mx-1 my-1" style="font-size:17px;">
+                <span class="material-symbols-outlined p-1 bg-red-500 text-white rounded-full text-sm mx-1 my-1"
+                    style="font-size:17px;">
                     delete
                 </span>
                 Hapus Data
             </p>
             <p class="flex items-center">
-                <span class="material-symbols-outlined p-1 bg-blue-500 text-white rounded-full text-sm mx-1 my-1" style="font-size:17px;">
+                <span class="material-symbols-outlined p-1 bg-blue-500 text-white rounded-full text-sm mx-1 my-1"
+                    style="font-size:17px;">
                     edit
                 </span>
                 Edit Data
@@ -23,16 +25,62 @@
         </div>
     </div>
     <div>
-        <% databuku.forEach(buku => { %>
-                <div class="shadow-lg flex p-2">
-                    <div>
-                        <img src="<%= buku.sampul %>" alt="">
-                        
-                    </div>
-                    <div>
-
-                    </div>
+        <% databuku.forEach(buku=> { %>
+            <div class="shadow-lg flex justify-between p-2 my-2" style="height: 180px;">
+                <div class="flex items-center ">
+                    <img src="<%= buku.sampul %>" alt="" class="shadow-sm" width="110px">
                 </div>
-        <% }) %>
+                <table class="overflow-auto w-2/12">
+                    <tr class="border-b-2">
+                        <td>Judul</td>
+                        <td> : </td>
+                        <td>
+                            <%= buku.judul %>
+                        </td>
+                    </tr>
+                    <tr class="border-b-2">
+                        <td>Penulis</td>
+                        <td>:</td>
+                        <td>
+                            <%= buku.penulis %>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr class="border-b-2">
+                        <td>Harga</td>
+                        <td>:</td>
+                        <td>
+                            <%= buku.harga %>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Views</td>
+                        <td>:</td>
+                        <td>
+                            <%= buku.views %>
+                        </td>
+                    </tr>
+                </table>
+                <div class="overflow-auto h-full w-7/12">
+                    <%= buku.deskripsi %>
+                </div>
+                <div class="flex items-center "style="width:5%;">
+                    <div class="p-3">
+                        <a href=""
+                        class="material-symbols-outlined p-1 bg-red-500 text-white rounded-full text-sm mx-1 my-1"
+                        style="font-size:17px;">
+                        delete
+                    </a>
+                    <br>
+                    <a href=""
+                        class="material-symbols-outlined p-1 bg-blue-500 text-white rounded-full text-sm mx-1 my-1"
+                        style="font-size:17px;">
+                        edit
+                    </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <% }) %>
     </div>
 </div>
