@@ -32,6 +32,8 @@ const writeData = (data) => {
 };
 
 
+
+
 //Crud
 app.get("/databuku",(req,res)=>{
     const data = readData();
@@ -48,15 +50,21 @@ app.post('/databuku', (req, res) => {
 
 app.put('/databuku/komentar/:idbuku',(req,res)=>{
     const data = readData();
-    console.log(typeof data);
     const index = data.findIndex(buku => buku.id == req.params.idbuku);
-    console.log(index);
     const komentar = req.body;
-    console.log(typeof komentar)
     data[index].komentar.push(komentar);
-    res.json({"pesan" : data[index].judul + "Komentar berhasil di tambahkan"});
+    res.json({"pesan" : data[index].judul + " Komentar berhasil di tambahkan"});
     writeData(data);
 })
+app.put('/databuku/views/:idbuku',(req,res)=>{
+    const data = readData();
+    const index = data.findIndex(buku => buku.id == req.params.idbuku);
+    const views = data[index].views;
+    data[index].views = views + 1;
+    writeData(data);
+})
+
+
 
 
 app.get("/style/tailwind",(req,res)=>{

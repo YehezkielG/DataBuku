@@ -89,4 +89,9 @@
         <% }) %>
     </div>
 </div>
+<%
+        fetch(`http://localhost:3000/databuku/views/${databuku.id}`,{
+            method:"put",
+        })
+%>
 <script src="../javascript/script.js"></script>
