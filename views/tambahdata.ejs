@@ -1,0 +1,88 @@
+<form action="../databuku" method="POST" enctype="multipart/form-data">
+    <div class="px-14 flex my-10">
+        <div style="width: 230px; " class="w-1/4 p-2">
+            <input type="text" class="font-bold text-2xl" name="judul" placeholder="Judul Buku" style="width: 220px;">
+            <input type="text" class="text-gray-600 text-lg " name="penulis" placeholder="Penulis" >
+            <hr class="mt-2">
+            <img src="" alt="" class="border border-gray-200 shadow-md mt-4 bg-gray-100" id="displayImage" name="image">
+            Masukkan sampul 
+            <input type="file" id="imageInput" accept="image/*" class="my-2" name="sampul">
+        </div>
+        <div class="w-3/5 mx-5 h-full overflow-auto" style="height: 410px;">
+            <p class="mt-1 font-bold">Deskripsi buku</p>
+            <textarea name="deskripsi" class="w-full h-full"></textarea>
+        </div>
+        <div class="w-1/4">
+            <table class="pl-4">
+                <tr class="font-bold text-blue-700">
+                    <td class="w-40">Penerbit</td>
+                    <td class="w-40">Jumlah Halaman</td>
+                </tr>
+                <tr>
+                    <td class="pb-2">
+                        <input type="text" name="penerbit" placeholder="Penerbit...">
+                    </td>
+                    <td class="pb-2">
+                        <input type="text" name="jumlahHalaman" placeholder="Jumlah Halaman..." >
+                    </td>
+                </tr>
+                <tr class="font-bold text-blue-700">
+                    <td>harga</td>
+                    <td>ukuran</td>
+                </tr>
+                <tr>
+                    <td class="pb-2">
+                        Rp. <input type="text" name="harga" placeholder="Harga..." class="mx-1 w-28">
+                    </td>
+                    <td class="pb-2 flex items-center">
+                        <input type="text" name="panjangBuku" class="w-6">cm
+                        <span class="mx-1">x</span>
+                        <input type="text" name="lebarBuku" class="w-6">cm
+                    </td>
+                </tr>
+                <tr class="font-bold text-blue-700">
+                    <td>Kategori</td>
+                    <td>Tanggal terbit</td>
+                </tr>
+                <tr>
+
+                    <td class="pb-2">
+                        <input type="text" name="kategori" id="kategori" hidden>
+                        <select id = 'pilihkategori' required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <option value="Novel">Novel</option>
+                            <option value="Self Improvment">Self Improvment</option>
+                            <option value="Psikologi">Psikologi</option>
+                            <option value="komik">komik</option>
+                        </select>
+                    </td>
+                    <td class="pb-2">
+                        <input type="date" name="tanggalTerbit">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="px-14 my-10">
+        <button id="tambahData" class="p-2 bg-blue-600 text-white float-right rounded-lg" type="submit">
+            Tambah Data
+        </button>
+    </div>
+</form>
+
+<div class="px-14 my-10 clear-both">
+    <h1 class="text-lg font-bold my-4">
+        Ulasan Pembaca
+    </h1>
+    <hr class="my-5">
+    <form class="flex justify-between items-center my-5">
+        <input type="text" placeholder="Masukkan Nama"
+            class="bg-gray-50 border border-gray-200 w-2/12 p-1 rounded-md mr-5" required id="nama" disabled>
+        <input type="text" placeholder="Tambahkan Ulasan......"
+            class="bg-gray-50 border border-gray-200 w-10/12 p-1 rounded-md" required id="isi" disabled>
+        <button class="material-symbols-outlined text-gray-800 text-center" style="width: 100px;" disabled  id="commentBtn">
+            send
+        </button>
+    </form>
+</div>
+<script src="../javascript/script.js"></script>

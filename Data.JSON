@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "judul": "Filosofi Teras",
     "penulis": "Henrry Manampiring",
     "harga": "120.000",
@@ -14,13 +14,17 @@
       {
         "nama": "Yehezkiel",
         "isi": "wah bukunya sangat bagus, saya kasi ⭐ 5"
+      },
+      {
+        "nama": "Ahmad",
+        "isi": "Buku sampah gak guna ajg"
       }
     ],
-    "views": 0,
+    "views": 4,
     "sampul": "http://localhost:3000/image/Sampul-buku/filosofi-teras.jpg"
   },
   {
-    "id": "2",
+    "id": 2,
     "judul": "Atomic habbits",
     "penulis": "James Clear",
     "harga": "110.000",
@@ -34,9 +38,103 @@
       {
         "nama": "ahmad",
         "isi": "Bukunya memotivasi 🔥🔥🔥"
+      },
+      {
+        "nama": "Jefri",
+        "isi": "wow keren bukunya sesuai harga"
       }
     ],
-    "views": 0,
+    "views": 7,
     "sampul": "http://localhost:3000/image/Sampul-buku/atomic-habits.jpg"
+  },
+  {
+    "id": 3,
+    "judul": "Thinking, Fast and Slow",
+    "penulis": "Daniel Kahneman",
+    "harga": "70.000",
+    "deskripsi": "Daniel Kahneman adalah salah satu pemikir paling penting abad ini. Gagasannya berdampak mendalam dan luas di berbagai bidang termasuk ekonomi, pengobatan, dan politik. Dalam buku yang sangat dinanti-nantikan ini, Daniel Kahneman menjelaskan ada dua sistem yang mendorong cara kita berpikir. Sistem 1 bersifat cepat, intuitif, dan emosional; Sistem 2 lebih pelan, lebih bertujuan, dan lebih logis. Kahneman menunjukan kemampuan luar biasa juga kekurangan dan bias yang dimiliki oleh berpikir cepat, serta mengungkapkan dampak kesan intuitif pada pikiran dan perilaku kita. Dengan mengetahui cara kedua sistem itu membentuk penilaian dan keputusan kita, kita bisa memahami, antara lain :\r\n\r\nDampak dari hilangnya antusiasme dan terlalu besarnya kepercayaan pada strategi korporat.\r\nSulitnya memprediksi apa yang membuat kita bahagia kelak\r\nTantangan untuk membuat kerangka yang jelas tentang risiko di tempat kerja serta rumah.\r\nDampak mendalam dari bias kognitif pada segala sesuatu, mulai dari bertransaksi di pasar bursa sampai merencanakan liburan berikutnya.\r\n",
+    "penerbit": "Gramedia",
+    "jumlahHalaman": "499",
+    "ukuran": "23 x 14",
+    "tanggalTerbit": "2011-10-25",
+    "kategori": "Psikologi",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/THINKING_FAST_AND_SLOW.jpg"
+  },
+  {
+    "id": 4,
+    "judul": "Thinking, Fast and Slow",
+    "penulis": "Daniel Kahneman",
+    "harga": "70.000",
+    "deskripsi": "Daniel Kahneman adalah salah satu pemikir paling penting abad ini. Gagasannya berdampak mendalam dan luas di berbagai bidang termasuk ekonomi, pengobatan, dan politik. Dalam buku yang sangat dinanti-nantikan ini, Daniel Kahneman menjelaskan ada dua sistem yang mendorong cara kita berpikir. Sistem 1 bersifat cepat, intuitif, dan emosional; Sistem 2 lebih pelan, lebih bertujuan, dan lebih logis. Kahneman menunjukan kemampuan luar biasa juga kekurangan dan bias yang dimiliki oleh berpikir cepat, serta mengungkapkan dampak kesan intuitif pada pikiran dan perilaku kita. Dengan mengetahui cara kedua sistem itu membentuk penilaian dan keputusan kita, kita bisa memahami, antara lain :\r\n\r\nDampak dari hilangnya antusiasme dan terlalu besarnya kepercayaan pada strategi korporat.\r\nSulitnya memprediksi apa yang membuat kita bahagia kelak\r\nTantangan untuk membuat kerangka yang jelas tentang risiko di tempat kerja serta rumah.\r\nDampak mendalam dari bias kognitif pada segala sesuatu, mulai dari bertransaksi di pasar bursa sampai merencanakan liburan berikutnya.\r\n",
+    "penerbit": "Gramedia",
+    "jumlahHalaman": "499",
+    "ukuran": "23 x 14",
+    "tanggalTerbit": "2011-10-25",
+    "kategori": "Psikologi",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/THINKING_FAST_AND_SLOW.jpg"
+  },
+  {
+    "id": 5,
+    "judul": "Cara memasak drama backgroud kebangaan",
+    "penulis": "",
+    "harga": "",
+    "deskripsi": "",
+    "penerbit": "",
+    "jumlahHalaman": "",
+    "ukuran": "cm x cm",
+    "tanggalTerbit": "",
+    "kategori": "Self Improvment",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/list-pl.jpg"
+  },
+  {
+    "id": 6,
+    "judul": "Cara memasak drama backgroud kebangaan",
+    "penulis": "",
+    "harga": "",
+    "deskripsi": "",
+    "penerbit": "",
+    "jumlahHalaman": "",
+    "ukuran": "cm x cm",
+    "tanggalTerbit": "",
+    "kategori": "Self Improvment",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/list-pl.jpg"
+  },
+  {
+    "id": 7,
+    "judul": "Cara memasak drama backgroud kebangaan",
+    "penulis": "",
+    "harga": "",
+    "deskripsi": "",
+    "penerbit": "",
+    "jumlahHalaman": "",
+    "ukuran": "cm x cm",
+    "tanggalTerbit": "",
+    "kategori": "Self Improvment",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/list-pl.jpg"
+  },
+  {
+    "id": 8,
+    "judul": "Terpikat",
+    "penulis": "",
+    "harga": "",
+    "deskripsi": "",
+    "penerbit": "",
+    "jumlahHalaman": "",
+    "ukuran": "cm x cm",
+    "tanggalTerbit": "",
+    "kategori": "Self Improvment",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/Artificial Intelligence and Machine Learning-roadmap.jpg"
   }
 ]
