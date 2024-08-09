@@ -41,7 +41,6 @@ app.get("/databuku", (req, res) => {
     res.json(data);
 })
 
-
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './public/image/sampul-buku')
