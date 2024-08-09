@@ -73,6 +73,15 @@ app.post('/databuku', upload.single('sampul'), function (req, res, next) {
     res.status(201);
     res.redirect('back');
 })
+app.delete('/databuku/:idbuku',(req,res)=>{
+    const data = readData();
+    const dataFilltred = data.filter((buku)=>buku.id != req.params.idbuku)
+    writeData(dataFilltred);
+    res.status(201);
+    res.redirect('back');
+})
+
+
 
 app.put('/databuku/komentar/:idbuku', (req, res) => {
     const data = readData();
@@ -89,6 +98,7 @@ app.put('/databuku/views/:idbuku', (req, res) => {
     data[index].views = views + 1;
     writeData(data);
 })
+
 
 
 

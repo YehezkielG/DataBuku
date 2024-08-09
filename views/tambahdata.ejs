@@ -1,8 +1,8 @@
 <form action="../databuku" method="POST" enctype="multipart/form-data">
     <div class="px-14 flex my-10">
         <div style="width: 230px; " class="w-1/4 p-2">
-            <input type="text" class="font-bold text-2xl" name="judul" placeholder="Judul Buku" style="width: 220px;">
-            <input type="text" class="text-gray-600 text-lg " name="penulis" placeholder="Penulis" >
+            <input type="text" class="font-bold text-xl" name="judul" placeholder="Judul Buku" style="width: 220px;" required>
+            <input type="text" class="text-gray-600" name="penulis" placeholder="Penulis" required> 
             <hr class="mt-2">
             <img src="" alt="" class="border border-gray-200 shadow-md mt-4 bg-gray-100" id="displayImage" name="image">
             Masukkan sampul 
@@ -48,7 +48,7 @@
 
                     <td class="pb-2">
                         <input type="text" name="kategori" id="kategori" hidden>
-                        <select id = 'pilihkategori' required>
+                        <select id = 'pilihkategori' required class="">
                             <option value="">-- Pilih Kategori --</option>
                             <option value="Novel">Novel</option>
                             <option value="Self Improvment">Self Improvment</option>

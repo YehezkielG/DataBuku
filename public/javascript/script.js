@@ -1,7 +1,9 @@
+const idbuku = document.getElementById("idbuku").value;
+
 document.getElementById("commentBtn").addEventListener("click", function () {
     const nama = document.getElementById("nama").value;
     const isi = document.getElementById("isi").value;
-    fetch(`http://localhost:3000/databuku/komentar/${this.value}`, {
+    fetch(`http://localhost:3000/databuku/komentar/${idbuku}`, {
         headers: {
         "Content-Type": "application/json",
         },
@@ -15,21 +17,37 @@ document.getElementById("commentBtn").addEventListener("click", function () {
     })
 })
 
-console.log("using public javascript");
-
-document.getElementById('imageInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = document.getElementById('displayImage');
-            img.src = e.target.result;
-            img.style.display = 'block';
-        }
-        reader.readAsDataURL(file);
+document.getElementById("sorting").addEventListener("change",async function(){
+    let url = await fetch('http://localhost:3000/databuku');
+    let response = await url.json();
+    const index = response.findIndex(buku => buku.id == idbuku);
+    const komentar = response[index].komentar;
+    let html = "";
+    if(this.value == 'Terlama'){
+        komentar.reverse().forEach(komentar => {
+            html+=showComment(komentar);
+        });
     }
-});
-document.getElementById("pilihkategori").addEventListener("change",function (){
-    console.log(this.value)
-    document.getElementById("kategori").value = this.value;
+    else{
+        komentar.forEach(komentar => {
+            html+=showComment(komentar);
+        });
+    }
+    document.getElementById("commentField").innerHTML = html;
 })
+
+function showComment(comment){
+    return `<div class="flex my-2">
+    <div class="mr-4">
+        <img src="../image/icon/user.png" alt="" srcset="" style="width: 50px;">
+    </div>
+    <div class="bg-gray-200 rounded-lg w-full p-2 inline-block">
+        <div class="font-bold text-sm">
+            ${comment.nama }
+        </div>
+        <div>
+            ${ comment.isi }
+        </div>
+    </div>
+</div>`
+}

@@ -1,9 +1,13 @@
+<script src="../javascript/ejs.js"></script>
+<script src="../javascript/ejs.min.js"></script>
+<input type="text" value="<%= databuku.id %>" id="idbuku">
+
 <div class="px-14 flex my-10">
     <div style="width: 230px; " class="w-1/4 p-2">
-        <h1 class="font-bold text-2xl">
+        <h1 class="font-bold text-xl">
             <%= databuku.judul %>
         </h1>
-        <h2 class="text-gray-600 text-lg">
+        <h2 class="text-gray-600">
             <%= databuku.penulis %>
         </h2>
         <hr class="mt-2">
@@ -71,27 +75,37 @@
             class="bg-gray-50 border border-gray-200 w-2/12 p-1 rounded-md mr-5" required id="nama">
         <input type="text" placeholder="Tambahkan Ulasan......"
             class="bg-gray-50 border border-gray-200 w-10/12 p-1 rounded-md" required id="isi">
-        <button class="material-symbols-outlined text-gray-800 text-center" style="width: 100px;" id="commentBtn" value="<%= databuku.id %>">
+        <button class="material-symbols-outlined text-gray-800 text-center" style="width: 100px;" id="commentBtn">
             send
         </button>
     </form>
-    <div>
+    <div class="flex items-center mb-5">
+        <span class="material-symbols-outlined mr-1">
+            sort
+        </span>
+        <select name="" class="appearance-none outline-none px-2" id="sorting">
+            <option value="">Urutkan Komentar</option>
+            <option value="Terbaru">Terbaru</option>
+            <option value="Terlama">Terlama</option>
+        </select>
+    </div>
+    <div id="commentField">
         <% databuku.komentar.forEach(komentar=> { %>
             <div class="flex my-2">
                 <div class="mr-4">
                     <img src="../image/icon/user.png" alt="" srcset="" style="width: 50px;">
                 </div>
                 <div class="bg-gray-200 rounded-lg w-full p-2 inline-block">
-                    <div class="font-bold text-sm"><%=  komentar.nama %></div>
-                    <div><%= komentar.isi %></div>
+                    <div class="font-bold text-sm">
+                        <%= komentar.nama %>
+                    </div>
+                    <div>
+                        <%= komentar.isi %>
+                    </div>
                 </div>
-            </div>            
+            </div>
         <% }) %>
     </div>
 </div>
-<%
-        fetch(`http://localhost:3000/databuku/views/${databuku.id}`,{
-            method:"put",
-        })
-%>
-<script src="../javascript/script.js"></script>
+<% fetch(`http://localhost:3000/databuku/views/${databuku.id}`,{ method:"put", }) %>
+    <script src="../javascript/script.js"></script>
