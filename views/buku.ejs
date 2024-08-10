@@ -1,6 +1,6 @@
 <script src="../javascript/ejs.js"></script>
 <script src="../javascript/ejs.min.js"></script>
-<input type="text" value="<%= databuku.id %>" id="idbuku">
+<input type="hidden" value="<%= databuku.id %>" id="idbuku">
 
 <div class="px-14 flex my-10">
     <div style="width: 230px; " class="w-1/4 p-2">
@@ -70,7 +70,7 @@
         Ulasan Pembaca
     </h1>
     <hr class="my-5">
-    <form action="#" class="flex justify-between items-center my-5">
+    <form action="" class="flex justify-between items-center my-5">
         <input type="text" placeholder="Masukkan Nama"
             class="bg-gray-50 border border-gray-200 w-2/12 p-1 rounded-md mr-5" required id="nama">
         <input type="text" placeholder="Tambahkan Ulasan......"

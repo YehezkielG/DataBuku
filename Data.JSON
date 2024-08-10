@@ -26,9 +26,13 @@
       {
         "nama": "Andi",
         "isi": "Mending ngck"
+      },
+      {
+        "nama": "Vinaa",
+        "isi": "hidup dengan stoicism memang setenang itu"
       }
     ],
-    "views": 108,
+    "views": 110,
     "sampul": "http://localhost:3000/image/Sampul-buku/filosofi-teras.jpg"
   },
   {
@@ -52,7 +56,57 @@
         "isi": "wow keren bukunya sesuai harga"
       }
     ],
-    "views": 7,
+    "views": 8,
     "sampul": "http://localhost:3000/image/Sampul-buku/atomic-habits.jpg"
+  },
+  {
+    "id": 8,
+    "judul": "Thinking, Fast and Slow",
+    "penulis": "Daniel Kahneman",
+    "harga": "70.000",
+    "deskripsi": "Daniel Kahneman adalah salah satu pemikir paling penting abad ini. Gagasannya berdampak mendalam dan luas di berbagai bidang termasuk ekonomi, pengobatan, dan politik. Dalam buku yang sangat dinanti-nantikan ini, Daniel Kahneman menjelaskan ada dua sistem yang mendorong cara kita berpikir. Sistem 1 bersifat cepat, intuitif, dan emosional; Sistem 2 lebih pelan, lebih bertujuan, dan lebih logis. Kahneman menunjukan kemampuan luar biasa juga kekurangan dan bias yang dimiliki oleh berpikir cepat, serta mengungkapkan dampak kesan intuitif pada pikiran dan perilaku kita",
+    "penerbit": "Gramedia",
+    "jumlahHalaman": "499",
+    "ukuran": "23cm x 14cm",
+    "tanggalTerbit": "2011-10-25",
+    "kategori": "Psikologi",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/THINKING_FAST_AND_SLOW.jpg"
+  },
+  {
+    "id": 13,
+    "ukuran": "20cm x 14cm",
+    "komentar": [],
+    "views": 0,
+    "sampul": "http://localhost:3000/image/Sampul-buku/madilog.jpg",
+    "judul": "Madilog",
+    "penulis": "Tan Malaka",
+    "harga": "120.000",
+    "deskripsi": "Materi dalam Madilog sangatlah beragam. Buku ini merangkum pemikiran-pemikiran filosofis, politik, dan ekonomi yang menjadi dasar bagi pemikiran Tan Malaka tentang perjuangan revolusioner. Salah satu poin sentral dalam Madilog adalah penerapan materialisme dialektika sebagai dasar bagi interpretasi sosial dan politik. Tan Malaka menjelaskan konsep-konsep seperti kelas sosial, perlawanan rakyat, dan pentingnya perjuangan dalam memahami dinamika masyarakat. Selain itu, aspek penting dalam Madilog adalah penjelasan Tan Malaka tentang dialektika. Menurut Tan Malaka, dialektika adalah cara pandang filosofis yang menggabungkan pemahaman kontradiksi dan perubahan sebagai bagian integral dari alam semesta. Tan Malaka membahas dialektika sebagai alat untuk memahami perubahan sosial dan sejarah. Dia menekankan pentingnya memahami kontradiksi dalam masyarakat untuk menggerakkan perubahan revolusioner.\r\n",
+    "penerbit": "Gramedia",
+    "jumlahHalaman": "300",
+    "tanggalTerbit": "07 Agustus 2024",
+    "kategori": "Psikologi"
+  },
+  {
+    "id": 14,
+    "judul": "Emotional Intelligence",
+    "penulis": "Daniel goleman",
+    "harga": "100.000",
+    "deskripsi": "Apakah IQ adalah takdir? Ternyata tidak sebagaimana yang lumrah kita pikirkan. Gardner memperlihatkan mengapa orang yang\r\n\r\nber-IQ tinggi mengalami kegagalan dan orang yang ber-IQ sedang menjadi sangat sukses. Penyebabnya adalah “kecerdasan\r\n\r\nemosional”, yang mencakup kesadaran diri dan kendali dorongan hati, ketekunan, semangat dan motivasi diri, empati, serta\r\n\r\nkecakapan sosial.\r\n\r\nKecerdasan emosional merupakan ciri orang-orang yang menonjol dalam kehidupan nyata: mereka yang memiliki hubungan dekat yang\r\n\r\nhangat dan menjadi bintang di tempat kerja. Ini juga ciri utama karakter dan disiplin diri, altruisme, serta belas\r\nkasih—kemampuan-kemampuan dasar yang dibutuhkan bila kita mengharapkan terciptanya masyarakat yang sejahtera.\r\n\r\nSebagaimana ditunjukkan oleh Goleman, kerugian akibat rendahnya kecerdasan emosional dapat berkisar dari kesulitan perkawinan\r\n\r\ndan mendidik anak hingga ke buruknya kesehatan jasmani. Rendahnya kecerdasan emosional dapat menghambat pertimbangan\r\n\r\nintelektual dan menghancurkan karier. Barangkali kerugian terbesar diderita oleh anak-anak, yang mungkin bisa mengalami\r\n\r\ndepresi, gangguan makan dan kehamilan yang tak diinginkan, agresivitas, serta kejahatan dengan kekerasan.\r\n\r\nKabar gembiranya, kecerdasan emosional tidak ditentukan sejak lahir. Karena pelajaran-pelajaran emosional yang diperoleh\r\n\r\nseorang anak akan membentuk sirkuit otaknya, Goleman memberikan pedoman mendetail tentang bagaimana orangtua\r\ndan sekolah dapat memanfaatkan kesempatan emas masa kanak-kanak it",
+    "penerbit": "Gramedia",
+    "jumlahHalaman": "486",
+    "ukuran": "24cm x 14cm",
+    "tanggalTerbit": "20 November 2009",
+    "kategori": "Self Improvment",
+    "komentar": [
+      {
+        "nama": "kiel",
+        "isi": "Bagus bukunya saya menjadi sangat terlatih dalam mengendalian emosi"
+      }
+    ],
+    "views": 4,
+    "sampul": "http://localhost:3000/image/Sampul-buku/kecerdasan-emosional.jpg"
   }
 ]

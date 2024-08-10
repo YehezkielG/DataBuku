@@ -18,9 +18,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 // File path untuk JSON
-
 const dataFilePath = path.join(__dirname, 'Data.json');
-
 // Fungsi untuk membaca data dari file JSON
 const readData = () => {
     const data = fs.readFileSync(dataFilePath, 'utf8');
@@ -50,6 +48,7 @@ const storage = multer.diskStorage({
     }
 })
 const upload = multer({ storage: storage });
+
 app.post('/databuku', upload.single('sampul'), function (req, res, next) {
     const data = readData();
     const newBook = {
@@ -70,8 +69,27 @@ app.post('/databuku', upload.single('sampul'), function (req, res, next) {
     data.push(newBook);
     writeData(data);
     res.status(201);
-    res.redirect('back');
+    res.render('tambahdata', {layout: "layout/main", title: "Tambah data buku", msg: "Data buku berhasil di tambahkan" });
 })
+app.post('/databuku/update/:id', upload.single('sampul'), function (req, res, next) {
+    const data = readData();
+    console.log(req.file)
+    const index = data.findIndex(buku => buku.id == req.params.id);
+        data[index].judul  = req.body.judul;
+        data[index].penulis  = req.body.penulis;
+        data[index].harga = req.body.harga;
+        data[index].deskripsi = req.body.deskripsi;
+        data[index].penerbit = req.body.penerbit;
+        data[index].jumlahHalaman = req.body.jumlahHalaman;
+        data[index].ukuran = req.body.panjangBuku+"cm" + " x " + req.body.lebarBuku+"cm";
+        data[index].tanggalTerbit = req.body.tanggalTerbit;
+        data[index].kategori = req.body.kategori;
+        data[index].sampul = `http://localhost:3000/image/Sampul-buku/${req.file.originalname}`
+        writeData(data);
+        res.status(201);
+        res.redirect("/admin");
+})
+
 app.delete('/databuku/:idbuku',(req,res)=>{
     const data = readData();
     const dataFilltred = data.filter((buku)=>buku.id != req.params.idbuku)
@@ -130,18 +148,14 @@ app.get("/admin", async (req, res) => {
 app.get("/admin/tambahdata", (req, res) => {
     res.render("tambahdata", { layout: "layout/main", title: "Tambah data buku" })
 })
-
-
+app.get("/admin/update/:id",async (req,res)=>{
+    const data = await readData().filter(buku => buku.id == req.params.id);
+    res.render("update", { layout: "layout/main", title: "Edit Buku" ,databuku:data[0]});
+})
 app.use("/", (req, res) => {
     res.status(404);
     res.render("404", { layout: "layout/main", title: "Error - 404" })
 })
-
-
-
-
-
-
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

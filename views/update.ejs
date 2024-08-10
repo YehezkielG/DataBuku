@@ -1,0 +1,144 @@
+    <form action="../../databuku/update/<%= databuku.id %>" method="POST" enctype="multipart/form-data">
+        <div class="px-14 flex my-10">
+            <div style="width: 230px; " class="w-1/4 p-2">
+                <input type="text" class="font-bold text-xl" name="judul" placeholder="Judul Buku" style="width: 220px;"
+                    required value="<%= databuku.judul %>">
+                <input type="text" class="text-gray-600" name="penulis" placeholder="Penulis" required value="<%= databuku.penulis %>">
+                <hr class="mt-2">
+                <img src="<%= databuku.sampul %>" alt="" class="border border-gray-200 shadow-md mt-4 bg-gray-100" id="displayImage" name="image">
+                Masukkan sampul
+                <input type="file" id="imageInput" accept="image/*" class="my-2" name="sampul" required>
+            </div>
+            <div class="w-3/5 mx-5 h-full overflow-auto" style="height: 410px;">
+                <p class="mt-1 font-bold">Deskripsi buku</p>
+                <textarea name="deskripsi" class="w-full h-full"value=""><%= databuku.deskripsi %></textarea>
+            </div>
+            <div class="w-1/4">
+                <table class="pl-4">
+                    <tr class="font-bold text-blue-700">
+                        <td class="w-40">Penerbit</td>
+                        <td class="w-40">Jumlah Halaman</td>
+                    </tr>
+                    <tr>
+                        <td class="pb-2">
+                            <input type="text" name="penerbit" placeholder="Penerbit..." value="<%= databuku.penerbit %>">
+                        </td>
+                        <td class="pb-2">
+                            <input type="text" name="jumlahHalaman" placeholder="Jumlah Halaman..." value="<%= databuku.jumlahHalaman %>">
+                        </td>
+                    </tr>
+                    <tr class="font-bold text-blue-700">
+                        <td>harga</td>
+                        <td>ukuran</td>
+                    </tr>
+                    <tr>
+                        <td class="pb-2">
+                            Rp. <input type="text" name="harga" placeholder="Harga..." class="mx-1 w-28" value="<%= databuku.harga %>">
+                        </td>
+                        <td class="pb-2 flex items-center">
+                            <input type="text" name="panjangBuku" class="w-6" value="<%= databuku.ukuran.slice(0,2) %>">cm
+                            <span class="mx-1">x</span>
+                            <input type="text" name="lebarBuku" class="w-6" value="<%= databuku.ukuran.slice(7,9) %>">cm
+                        </td>
+                    </tr>
+                    <tr class="font-bold text-blue-700">
+                        <td>Kategori</td>
+                        <td>Tanggal terbit</td>
+                    </tr>
+                    <tr>
+                        <td class="pb-2">
+                            <input type="text" name="kategori" id="kategori" hidden>
+                            <select id='pilihkategori' required class="appearance-none px-2" value="<%= databuku.kategori  %>">
+                                <option value="">-- Pilih Kategori --</option>
+                                <option value="Novel">Novel</option>
+                                <option value="Self Improvment">Self Improvment</option>
+                                <option value="Psikologi">Psikologi</option>
+                                <option value="komik">komik</option>
+                            </select>
+                        </td>
+                        <td class="pb-2">
+                            <input type="text" name="tanggalTerbit" id="dateFormat" class="w-10/12" value="<%= databuku.tanggalTerbit %>" readonly>
+                            <input type="date" id="dateInput" class="appearance-none w-5" >
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="px-14 my-10">
+            <a href="../admin" class="underline text-blue-600">
+                Kembali
+            </a>
+            <button id="tambahData" class="p-2 bg-blue-600 text-white float-right rounded-lg" type="submit">
+                Update Data
+            </button>
+        </div>
+    </form>
+    
+    <div class="px-14 my-10 clear-both">
+        <h1 class="text-lg font-bold my-4">
+            Ulasan Pembaca
+        </h1>
+        <hr class="my-5">
+        <form class="flex justify-between items-center my-5">
+            <input type="text" placeholder="Masukkan Nama"
+                class="bg-gray-50 border border-gray-200 w-2/12 p-1 rounded-md mr-5" required id="nama" disabled>
+            <input type="text" placeholder="Tambahkan Ulasan......"
+                class="bg-gray-50 border border-gray-200 w-10/12 p-1 rounded-md" required id="isi" disabled>
+            <button class="material-symbols-outlined text-gray-800 text-center" style="width: 100px;" disabled
+                id="commentBtn">
+                send
+            </button>
+        </form>
+    
+        <div class="flex items-center mb-5">
+            <span class="material-symbols-outlined mr-1">
+                sort
+            </span>
+            <select name="" class="appearance-none outline-none px-2" id="sorting">
+                <option value="">Urutkan Komentar</option>
+                <option value="Terbaru">Terbaru</option>
+                <option value="Terlama">Terlama</option>
+            </select>
+        </div>
+    </div>
+    <script src="../javascript/ejs.js"></script>
+    <script src="../javascript/ejs.min.js"></script>
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById('displayImage');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        document.getElementById("pilihkategori").addEventListener("change", function () {
+            console.log(this.value)
+            document.getElementById("kategori").value = this.value;
+        })
+        document.getElementById("dateInput").addEventListener("input", function () {
+                //Format mm-dd-yyyy
+                const bulan = [
+                    "Januari",
+                    "Februari",
+                    "Maret",
+                    "April",
+                    "Mei",
+                    "Juni",
+                    "Juli",
+                    "Agustus",
+                    "September",
+                    "Oktober",
+                    "November",
+                    "Desember"
+                ];
+                const date = this.value.split("-");
+                console.log(date);
+                const dateFormated =   `${date[2]} ${bulan[parseInt(date[1])-1]} ${date[0]}`
+                document.getElementById("dateFormat").value = dateFormated;
+            })
+    </script>
